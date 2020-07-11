@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+
+<div class="container">
+
+    {% block body %}
+    <style>
+        body {
+            background-color: rgb(56, 81, 150);
+
+        }
+
+        .signup-content {
+            background: #fff;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -o-border-radius: 10px;
+            -ms-border-radius: 10px;
+            padding: 50px 85px;
+        }
+
+        .form-group {
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <body>
+
+
+
+
+
+        <div class="signup-content">
+
+
+            <h2 class="form-title">Duygu Analizi</h2>
+            <div class="form-group">
+                <form action="/duygu" method="POST" class="form-group">
+                    <label for="comment">Cümle <span class="red-star">*</span></label>
+
+                    <textarea name="sentiment_metin" class="form-control" rows="1" id="" required
+                        maxlength="100"></textarea><br><br><br>
+                        <label for="comment">Sonuç <span class="red-star"></span></label>
+
+                    <textarea name="sonuc" class="form-control" rows="1" id="" 
+                        maxlength="100">
+                    {{prediction}}
+                    </textarea>
+
+            </div>
+
+
+            <div class="form-group" id="submitblock">
+                <button type="submit" class="btn btn-primary">Analiz Et</button>
+
+            </div>
+            </form>
+
+
+
+
+            <div class="alert alert-danger loading" id="loadingblock">
+                <strong> Cümlenin olumlu ya da olumsuz olduğunu bulur.</strong>
+            </div>
+        </div>
+</div>
+
+
+</body>
+
+
+
+</form>
+
+
+
+
+
+{% endblock body %}
+
+
+
+
+</div>

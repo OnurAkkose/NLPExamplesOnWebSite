@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+<div class="container">
+  {% block body %}
+  <style>
+    body {
+      background-color: rgb(56, 81, 150);
+
+    }
+
+    .signup-content {
+      background: #fff;
+      border-radius: 10px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -o-border-radius: 10px;
+      -ms-border-radius: 10px;
+      padding: 50px 85px;
+    }
+
+    .form-group {
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+  </style>
+
+  <body>
+ 
+
+      
+       
+        
+          <div class="signup-content">
+
+            
+            <h2 class="form-title">Haberin Hangi Kategoriye Ait Olduğunu Bul</h2>
+            <div class="form-group">
+              <form action="/tahmin" method="POST" class="form-group">
+                <label for="comment">Haber <span class="red-star">*</span></label>
+         
+                  <textarea name="haber_metni" class="form-control" rows="7" id="Paragraph" required
+                    maxlength="1000"></textarea>
+
+              </div>
+            
+
+            <div class="form-group" id="submitblock">
+              <button type="submit" class="btn btn-primary">Sınıflandır</button>
+
+            </div>
+          </form>
+          
+
+
+
+            <div class="alert alert-danger loading" id="loadingblock">
+              <strong> 6 farklı haber kategorisi bilinmektedir.</strong>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+  </body>
+
+
+
+</form>
+{% endblock body %}
